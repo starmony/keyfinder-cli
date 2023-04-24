@@ -13,18 +13,18 @@ namespace KeyNotation
      */
     key_map standard =
     {
-        {KeyFinder::A_MAJOR,       "A Major" }, {KeyFinder::A_MINOR,       "Am Minor" },
-        {KeyFinder::B_FLAT_MAJOR,  "Bb  Major"}, {KeyFinder::B_FLAT_MINOR,  "Bbm Minor"},
-        {KeyFinder::B_MAJOR,       "B Major" }, {KeyFinder::B_MINOR,       "Bm Minor" },
-        {KeyFinder::C_MAJOR,       "C Major" }, {KeyFinder::C_MINOR,       "Cm Minor" },
-        {KeyFinder::D_FLAT_MAJOR,  "Db Major"}, {KeyFinder::D_FLAT_MINOR,  "Dbm Minor"},
-        {KeyFinder::D_MAJOR,       "D Major" }, {KeyFinder::D_MINOR,       "Dm Minor" },
-        {KeyFinder::E_FLAT_MAJOR,  "Eb Major"}, {KeyFinder::E_FLAT_MINOR,  "Ebm Minor"},
-        {KeyFinder::E_MAJOR,       "E Major" }, {KeyFinder::E_MINOR,       "Em Minor" },
-        {KeyFinder::F_MAJOR,       "F Major" }, {KeyFinder::F_MINOR,       "Fm Minor" },
-        {KeyFinder::G_FLAT_MAJOR,  "Gb Major"}, {KeyFinder::G_FLAT_MINOR,  "Gbm Minor"},
-        {KeyFinder::G_MAJOR,       "G Major" }, {KeyFinder::G_MINOR,       "Gm Minor" },
-        {KeyFinder::A_FLAT_MAJOR,  "Ab Major"}, {KeyFinder::A_FLAT_MINOR,  "Abm Minor"},
+        {KeyFinder::A_MAJOR,       "A Major" }, {KeyFinder::A_MINOR,       "A Minor" },
+        {KeyFinder::B_FLAT_MAJOR,  "Bb  Major"}, {KeyFinder::B_FLAT_MINOR,  "Bb Minor"},
+        {KeyFinder::B_MAJOR,       "B Major" }, {KeyFinder::B_MINOR,       "B Minor" },
+        {KeyFinder::C_MAJOR,       "C Major" }, {KeyFinder::C_MINOR,       "C Minor" },
+        {KeyFinder::D_FLAT_MAJOR,  "Db Major"}, {KeyFinder::D_FLAT_MINOR,  "Db Minor"},
+        {KeyFinder::D_MAJOR,       "D Major" }, {KeyFinder::D_MINOR,       "D Minor" },
+        {KeyFinder::E_FLAT_MAJOR,  "Eb Major"}, {KeyFinder::E_FLAT_MINOR,  "Eb Minor"},
+        {KeyFinder::E_MAJOR,       "E Major" }, {KeyFinder::E_MINOR,       "E Minor" },
+        {KeyFinder::F_MAJOR,       "F Major" }, {KeyFinder::F_MINOR,       "F Minor" },
+        {KeyFinder::G_FLAT_MAJOR,  "Gb Major"}, {KeyFinder::G_FLAT_MINOR,  "Gb Minor"},
+        {KeyFinder::G_MAJOR,       "G Major" }, {KeyFinder::G_MINOR,       "G Minor" },
+        {KeyFinder::A_FLAT_MAJOR,  "Ab Major"}, {KeyFinder::A_FLAT_MINOR,  "Ab Minor"},
     };
 
     /**
