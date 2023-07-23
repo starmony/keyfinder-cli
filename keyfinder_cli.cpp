@@ -15,7 +15,9 @@ extern "C"
 }
 
 #include "key_notations.h"
+#include "MiniBpm.h"
 
+using namespace breakfastquay;
 /**
  * The "safe" AVPacket wrapper will handle memory management of the packet,
  * ensuring that if an instance of this packet wrapper is destroyed the
@@ -77,7 +79,7 @@ struct SafeAVPacket
  * @param file_path The file to read audio data from
  * @param audio     The KeyFinder AudioData container to fill
  */
-void fill_audio_data(const char* file_path, KeyFinder::AudioData &audio)
+double fill_audio_data(const char* file_path, KeyFinder::AudioData &audio)
 {
     AVFormatContext* format_ctx_ptr = avformat_alloc_context();
 
@@ -168,6 +170,7 @@ void fill_audio_data(const char* file_path, KeyFinder::AudioData &audio)
     SafeAVPacket packet;
     std::shared_ptr<AVFrame> audio_frame(av_frame_alloc(), &av_free);
 
+    MiniBPM bpm(audio.getFrameRate());
     // Read all stream samples into the AudioData container
     while (true)
     {
@@ -187,6 +190,11 @@ void fill_audio_data(const char* file_path, KeyFinder::AudioData &audio)
             if (result < 0)
                 throw std::runtime_error("Unable to decode packet");
 
+            if (codec_context->sample_fmt == AV_SAMPLE_FMT_FLTP)
+            {
+                const float* sample_data = (const float*) audio_frame->extended_data[0];
+                bpm.process(sample_data, audio_frame->nb_samples);
+            }
             // The KeyFinder::AudioData object expects non-planar 16 bit PCM data.
             // If we didn't decode audio data in that format we have to re-sample
             if (codec_context->sample_fmt != AV_SAMPLE_FMT_S16)
@@ -227,6 +235,7 @@ void fill_audio_data(const char* file_path, KeyFinder::AudioData &audio)
             }
         }
     }
+    return bpm.estimateTempo();
 }
 
 int main(int argc, char** argv)
@@ -292,9 +301,10 @@ int main(int argc, char** argv)
     // Hide av* warnings and errors
     av_log_set_callback([](void *, int, const char*, va_list) {});
 
+    double bpm;
     try
     {
-        fill_audio_data(file_path, audio_data);
+        bpm = fill_audio_data(file_path, audio_data);
         key = key_finder.keyOfAudio(audio_data);
     }
     catch (std::exception &e)
@@ -306,7 +316,7 @@ int main(int argc, char** argv)
     // Only return a key when we don't have silence - rule 12: Be quiet!
     if (key != KeyFinder::SILENCE)
     {
-        std::cout << selected_notation[key] << std::endl;
+        std::cout << selected_notation[key] << "|" << bpm << std::endl;
     }
 
     return 0;
