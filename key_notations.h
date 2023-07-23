@@ -13,18 +13,18 @@ namespace KeyNotation
      */
     key_map standard =
     {
-        {KeyFinder::A_MAJOR,       "A Major" }, {KeyFinder::A_MINOR,       "A Minor" },
-        {KeyFinder::B_FLAT_MAJOR,  "Bb  Major"}, {KeyFinder::B_FLAT_MINOR,  "Bb Minor"},
-        {KeyFinder::B_MAJOR,       "B Major" }, {KeyFinder::B_MINOR,       "B Minor" },
-        {KeyFinder::C_MAJOR,       "C Major" }, {KeyFinder::C_MINOR,       "C Minor" },
-        {KeyFinder::D_FLAT_MAJOR,  "Db Major"}, {KeyFinder::D_FLAT_MINOR,  "Db Minor"},
-        {KeyFinder::D_MAJOR,       "D Major" }, {KeyFinder::D_MINOR,       "D Minor" },
-        {KeyFinder::E_FLAT_MAJOR,  "Eb Major"}, {KeyFinder::E_FLAT_MINOR,  "Eb Minor"},
-        {KeyFinder::E_MAJOR,       "E Major" }, {KeyFinder::E_MINOR,       "E Minor" },
-        {KeyFinder::F_MAJOR,       "F Major" }, {KeyFinder::F_MINOR,       "F Minor" },
-        {KeyFinder::G_FLAT_MAJOR,  "Gb Major"}, {KeyFinder::G_FLAT_MINOR,  "Gb Minor"},
-        {KeyFinder::G_MAJOR,       "G Major" }, {KeyFinder::G_MINOR,       "G Minor" },
-        {KeyFinder::A_FLAT_MAJOR,  "Ab Major"}, {KeyFinder::A_FLAT_MINOR,  "Ab Minor"},
+        {KeyFinder::A_MAJOR,       "A" }, {KeyFinder::A_MINOR,       "Am" },
+        {KeyFinder::B_FLAT_MAJOR,  "Bb"}, {KeyFinder::B_FLAT_MINOR,  "Bbm"},
+        {KeyFinder::B_MAJOR,       "B" }, {KeyFinder::B_MINOR,       "Bm" },
+        {KeyFinder::C_MAJOR,       "C" }, {KeyFinder::C_MINOR,       "Cm" },
+        {KeyFinder::D_FLAT_MAJOR,  "Db"}, {KeyFinder::D_FLAT_MINOR,  "Dbm"},
+        {KeyFinder::D_MAJOR,       "D" }, {KeyFinder::D_MINOR,       "Dm" },
+        {KeyFinder::E_FLAT_MAJOR,  "Eb"}, {KeyFinder::E_FLAT_MINOR,  "Ebm"},
+        {KeyFinder::E_MAJOR,       "E" }, {KeyFinder::E_MINOR,       "Em" },
+        {KeyFinder::F_MAJOR,       "F" }, {KeyFinder::F_MINOR,       "Fm" },
+        {KeyFinder::G_FLAT_MAJOR,  "Gb"}, {KeyFinder::G_FLAT_MINOR,  "Gbm"},
+        {KeyFinder::G_MAJOR,       "G" }, {KeyFinder::G_MINOR,       "Gm" },
+        {KeyFinder::A_FLAT_MAJOR,  "Ab"}, {KeyFinder::A_FLAT_MINOR,  "Abm"},
     };
 
     /**
